@@ -1,0 +1,22 @@
+---
+- name: Test the plugins and modules
+  hosts: localhost
+  gather_facts: false
+  become: false
+
+  tasks:
+    - name: Transform text to upper
+      ansible.builtin.debug:
+        msg: "Upper Text: {{ 'Hallo Welt' | training.example.to_upper }}"
+
+    - name: Transform text to lower
+      ansible.builtin.debug:
+        msg: "Lower Text: {{ 'Hallo Welt' | training.example.to_lower }}"
+
+    - name: Reverse text
+      ansible.builtin.debug:
+        msg: "Reverse Text: {{ 'Hallo Welt' | training.example.reverse_text }}"
+
+    - name: Remove a specified character
+      ansible.builtin.debug:
+        msg: "Remove 5 character: {{ 'Hallo Welt' | training.example.remove_character(5) }}"
