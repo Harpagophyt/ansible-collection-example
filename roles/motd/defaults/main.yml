@@ -1,0 +1,4 @@
+---
+# defaults file for .
+motd_message: ""
+motd_filename: ansible

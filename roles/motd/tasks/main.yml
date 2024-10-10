@@ -1,0 +1,12 @@
+---
+# tasks file for .
+- name: Deploy the motd file
+  ansible.builtin.copy:
+    content: |
+      {{ ansible_managed }}
+      {{ motd_message }}
+    dest: /etc/motd.d/{{ motd_filename }}
+    owner: root
+    group: root
+    mode: "00644"
+    setype: etc_t
