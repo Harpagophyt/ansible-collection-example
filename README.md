@@ -8,5 +8,5 @@ Add this to your `requirements.yml`
 - name: training.example
   source: "https://github.com/Harpagophyt/ansible-collection-example.git"
   type: git
-  version: "1.0.0"
+  version: "1.0.1"
 ```
